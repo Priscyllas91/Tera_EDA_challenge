@@ -1,0 +1,19 @@
+#Chi-Squared Test 
+
+    contigency= pd.crosstab(dat['t_score'], dat['score_dep']) 
+
+     contigency
+
+     contigency_pct = pd.crosstab(dat['t_score'], dat['score_dep'], normalize='index')
+
+     contigency_pct
+
+
+#calculating p-value
+
+    from scipy.stats import chi2_contingency
+    c, p, dof, expected = chi2_contingency(contigency) 
+
+    # Print the p-value
+      
+      print(p)
