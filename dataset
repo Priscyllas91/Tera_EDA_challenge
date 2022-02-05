@@ -1,0 +1,56 @@
+#uploading the data
+
+     import pandas as pd
+     import numpy as np
+     import matplotlib.pyplot as plt
+     import seaborn as sns
+
+     paga= pd.read_csv("PAGHEI.csv")
+     phq= pd.read_csv("PHQ.csv")
+     
+#getting info from them 
+
+     paga.info()
+
+     phq.info()
+ 
+#merging the dataset to create an unified one, without children:
+
+
+    dat= pd.merge(paga,phq,on='SEQN')
+    print(dat)
+ 
+#getting info from the new dataset
+
+    dat.columns
+ 
+    dat.shape
+
+    dat.info
+
+#cleaning the dataset from people that refused to answer or didn't know an information of one or more variables
+
+     dat.drop(dat.loc[dat['DPQ010'] == 7].index, inplace=True)
+     dat.drop(dat.loc[dat['DPQ010'] == 9].index, inplace=True)
+     dat.drop(dat.loc[dat['DPQ020'] == 7].index, inplace=True)
+     dat.drop(dat.loc[dat['DPQ020'] == 9].index, inplace=True)
+     dat.drop(dat.loc[dat['DPQ030'] == 7].index, inplace=True)
+     dat.drop(dat.loc[dat['DPQ030'] == 9].index, inplace=True)
+     dat.drop(dat.loc[dat['DPQ040'] == 7].index, inplace=True)
+     dat.drop(dat.loc[dat['DPQ040'] == 9].index, inplace=True)
+     dat.drop(dat.loc[dat['DPQ050'] == 7].index, inplace=True)
+     dat.drop(dat.loc[dat['DPQ050'] == 9].index, inplace=True)
+     dat.drop(dat.loc[dat['DPQ060'] == 7].index, inplace=True)
+     dat.drop(dat.loc[dat['DPQ060'] == 9].index, inplace=True)
+     dat.drop(dat.loc[dat['DPQ070'] == 7].index, inplace=True)
+     dat.drop(dat.loc[dat['DPQ070'] == 9].index, inplace=True)
+     dat.drop(dat.loc[dat['DPQ080'] == 7].index, inplace=True)
+     dat.drop(dat.loc[dat['DPQ080'] == 9].index, inplace=True)
+     dat.drop(dat.loc[dat['DPQ090'] == 7].index, inplace=True)
+     dat.drop(dat.loc[dat['DPQ090'] == 9].index, inplace=True)
+     dat.drop(dat.loc[dat['DMDEDUC'] == 7].index, inplace=True)
+     dat.drop(dat.loc[dat['DMDEDUC'] == 9].index, inplace=True)
+     dat.drop(dat.loc[dat['INDFMINC'] == 77].index, inplace=True)
+     dat.drop(dat.loc[dat['INDFMINC'] == 99].index, inplace=True)
+  
+
