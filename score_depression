@@ -1,0 +1,29 @@
+#creating a new variable that represents the score of depression 
+
+    dat['PHQ9'] = dat['DPQ010'] + dat['DPQ090']
+  
+#checking if it worked
+
+    dat.head(10)
+#creating the score
+
+ if 'PHQ9' < "5":
+    dat['PHQ9_grp']="0" #without symptoms
+    
+ if "5"<= 'PHQ9' <"10":
+    dat['PHQ9_grp']="1" #light
+    
+ if "10"<= 'PHQ9'<"15":
+    dat['PHQ9_grp']="2" #moderate 
+    
+ if "15"<= 'PHQ9' <"19":
+    dat['PHQ9_grp']= "3" #lightly severe
+    
+ if 'PHQ9' >= "19" :
+    dat['PHQ9_grp']= "4" #ssevere
+
+ 
+ dat.head(10)
+ 
+
+  
