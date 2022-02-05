@@ -1,0 +1,43 @@
+#discovering the number of nulls 
+
+   dat.isnull().sum()
+   
+#dropping in this case, because the NaN represent less than 10% of the sample
+   
+   dat.dropna() 
+ 
+ #renaming the variables 
+ 
+dat.rename(columns={'HEI2015C1_TOTALVEG':'t_veg'}, inplace=True)
+dat.rename(columns={'HEI2015C2_GREEN_AND_BEAN':'green_bean'}, inplace=True)
+dat.rename(columns={'HEI2015C3_TOTALFRUIT':'t_fruit'}, inplace=True)
+dat.rename(columns={'HEI2015C4_WHOLEFRUIT':'w_fruit'}, inplace=True)
+dat.rename(columns={'HEI2015C5_WHOLEGRAIN':'w_grain'}, inplace=True)
+dat.rename(columns={'HEI2015C6_TOTALDAIRY':'t_dairy'}, inplace=True)
+dat.rename(columns={'HEI2015C7_TOTPROT':'t_prot'}, inplace=True)
+dat.rename(columns={'HEI2015C8_SEAPLANT_PROT':'plant_prot'}, inplace=True)
+dat.rename(columns={'HEI2015C9_FATTYACID':'fat_acid'}, inplace=True)
+dat.rename(columns={'HEI2015C11_REFINEDGRAIN':'refine_grain'}, inplace=True)
+dat.rename(columns={'HEI2015C12_SFAT':'sfat'}, inplace=True)
+dat.rename(columns={'HEI2015C13_ADDSUG':'add_sug'}, inplace=True)
+dat.rename(columns={'HEI2015C10_SODIUM':'sodium'}, inplace=True)
+dat.rename(columns={'HEI2015_TOTAL_SCORE':'t_score'}, inplace=True)
+dat.rename(columns={'DPQ010':'low_interest'}, inplace=True)
+dat.rename(columns={'DPQ020':'down_dep'}, inplace=True)
+dat.rename(columns={'DPQ030':'sleep_problem'}, inplace=True)
+dat.rename(columns={'DPQ040':'tired'}, inplace=True)
+dat.rename(columns={'DPQ050':'appetite_issues'}, inplace=True)
+dat.rename(columns={'DPQ060':'failure'}, inplace=True)
+dat.rename(columns={'DPQ070':'focus_issues'}, inplace=True)
+dat.rename(columns={'DPQ080':'slow_agitated'}, inplace=True)
+dat.rename(columns={'DPQ090':'self_injury'}, inplace=True)
+dat.rename(columns={'RIAGENDR':'gender'}, inplace=True)
+dat.rename(columns={'RIDAGEYR':'age'}, inplace=True)
+dat.rename(columns={'RIDRETH1':'race'}, inplace=True)
+dat.rename(columns={'DMDEDUC':'educ'}, inplace=True)
+dat.rename(columns={'INDFMINC':'family_income'}, inplace=True)
+dat.rename(columns={'PHQ9':'score_dep'}, inplace=True) 
+dat.rename(columns={'PHQ9_grp':'grouped_score'}, inplace=True) 
+dat.rename(columns={'PAG_MINW':'week_hour_exer'}, inplace=True)
+dat.rename(columns={'ADHERENCE':'exer_score'}, inplace=True)
+
