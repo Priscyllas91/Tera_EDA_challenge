@@ -1,0 +1,33 @@
+#univariate analysis from weekly hours of exercise
+
+  sns.set(font_scale = 1.3)
+  coluna = 'week_hour_exer' 
+
+
+  sns.displot(
+       dat[coluna], 
+       height=4, 
+       aspect=3)
+
+plt.ylabel('Density')
+
+plt.show()
+
+
+#univariate analysis of gender's porportion on the sample
+
+dat['gender'].plot.hist()
+
+#descritive analysis
+
+dat.describe() 
+
+
+#scatter plot between score_dep and age
+
+dat.plot(
+    x='age', # Coluna para o eixo X
+    y='score_dep', # Coluna para o eixo Y
+    kind='scatter' # Tipo de gráfico. Para dispersão, usamos 'scatter'
+)
+plt.show()
